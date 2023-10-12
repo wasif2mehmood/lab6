@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        td {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            height: 60px;
+            text-align: right;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px 5px 0 0;
+            background-color: #ffffff;
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: #d1c9c9;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .btn-orange {
+            background-color: #ff8c00;
+            color: #fff;
+        }
+
+        .btn-orange:hover {
+            background-color: #ff9f33;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <table class="calc">
+        <tr>
+            <td colspan="5"><input type="text" id="screen"></td>
+        </tr>
+        <tr>
+            <td><button class="btn" onclick="btn_MC()">MC</button></td>
+            <td><button class="btn" onclick="btn(0)">0</button></td>
+            <td><button onclick="btn(1)" class="btn" >1</button></td>
+            <td><button class="btn" onclick="btn(2)">2</button></td>
+            <td><button class="btn btn-orange" onclick="btn('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn"onclick="btn_MS()">MS</button></td>
+            <td><button class="btn" onclick="btn(3)">3</button></td>
+            <td><button class="btn" onclick="btn(4)">4</button></td>
+            <td><button class="btn" onclick="btn(5)">5</button></td>
+            <td><button class="btn btn-orange" onclick="btn_sub('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" onclick="btn_MR()">MR</button></td>
+            <td><button class="btn" onclick="btn(6)">6</button></td>
+            <td><button class="btn" onclick="btn(7)">7</button></td>
+            <td><button class="btn" onclick="btn(8)">8</button></td>
+            <td><button class="btn btn-orange" onclick="btn('*')">X</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" onclick="btn_Mplus()">M+</button></td>
+            <td><button class="btn" onclick="btn(9)">9</button></td>
+            <td><button class="btn" onclick="btn_plusminus()">±</button></td>
+            <td><button class="btn btn-orange" onclick="btn_equal()">=</button></td>
+            <td><button class="btn btn-orange" onclick="btn('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" onclick="btn_rec()">1/x</button></td>
+            <td><button class="btn" onclick="btn('.0')">.</button></td>
+            <td><button class="btn" onclick="btn_sqr()">x2</button></td>
+            <td><button class="btn" onclick="btn_sqrt()">√</button></td>
+            <td><button class="btn btn-orange" onclick="btn_clr()">C</button></td>
+        </tr>
+    </table>
+</body>
+</html>
